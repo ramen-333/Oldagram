@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
+
+html, body {
+    margin: 0 auto;
+    padding: 0;
+    font-family: "Source Sans 3", sans-serif;
+    background-color: #F5F5F5;
+}
+
+.main-design {
+    margin: auto;
+    width: 375px;
+    background-color: #EDEDED;
+}
+
+/* heading area */
+
+header {
+    height: 67px;
+    background-color: #FFFFFF;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #C6C6C6;
+}
+
+.oldgram-logo {
+    width: 127px;
+    margin: 3 0 0 16.5px;
+}
+
+.your-avatar, .avatar {
+    width: 34px;
+    height: 34px;
+    margin: 16.5px;
+    border-radius: 50%;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.4);
+}
+
+/* post */
+
+.post-content {
+    height: 545px;
+    margin-bottom: 25.5px;
+    background-color: #FFFFFF;
+}
+
+.post-3 {
+    padding-bottom: 15.5px;
+}
+
+/* user info */
+
+.user-info {
+    width: 348px;
+    height: 34px;
+    padding: 13.5px;
+    display: flex;
+    align-items: center;
+}
+
+.avatar {
+    margin: 0;
+    box-shadow: none;
+}
+
+.text-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 6px;
+}
+
+.user-full-name {
+    font-weight: bold;
+    font-size: 13px;
+}
+
+.location-text {
+    font-size: 12px;
+}
+
+/* post image */
+
+.post-image {
+    width: 375px;
+    height: 375px;
+}
+
+/* post info */
+
+.post-info {
+    height: 78px;
+    padding: 15.5px 0 15.5px 15px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0 0 4px 0;
+}
+
+.icons {
+    display: flex;
+    gap: 12px;
+}
+
+.icon-size {
+    width: 23px;
+    height: auto;
+    cursor: pointer;
+}
+
+.like-count {
+    font-weight: bold;
+    font-size: 14px;
+    margin-bottom: 4px;
+}
+
+.username-caption {
+    font-size: 14px;
+}
