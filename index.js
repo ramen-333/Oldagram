@@ -28,3 +28,35 @@ const posts = [
     }
 ]
 
+const container = document.getElementById("posts-container");
+const template = document.getElementById("post-template");
+
+posts.forEach(post => {
+    const clone = template.content.cloneNode(true);
+
+    clone.querySelector(".avatar").src = post.avatar;
+    clone.querySelector(".avatar").alt = `${post.name}'s Avatar`;
+
+    clone.querySelector(".user-full-name").textContent = post.name;
+    clone.querySelector(".location-text").textContent = post.location;
+
+    clone.querySelector(".post-image").src = post.post;
+    clone.querySelector(".post-image").alt = `Post by ${post.username}`;
+
+    clone.querySelector(".like-count").textContent = `${post.likes.toLocaleString()} Likes`;
+    clone.querySelector(".username-caption").innerHTML = `<b>${post.username}</b> ${post.comment}`;
+
+    const heartIcon = clone.querySelector(".icons li img[alt='Like']");
+    const likeCountEl = clone.querySelector(".like-count");
+
+    let likeCount = post.likes;
+
+    heartIcon.addEventListener("click", () => {
+        likeCount++;
+        likeCountEl.textContent = `${likeCount.toLocaleString()} Likes`;
+        heartIcon.classList.toggle("liked");
+    })
+
+    container.appendChild(clone);
+})
+
